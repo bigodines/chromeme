@@ -31,6 +31,7 @@ if (!Array.prototype.indexOf)
 
 smart_meme = function() {
     var eventHandler, getContent, postContent, clearSelection, _click, _toggle, _getElementByClassName, _jsonp;
+    
     eventHandler = function(evt) {
         var elem,old_border, bindable_elements;
 	elem = evt.srcElement || evt.target;
@@ -58,25 +59,25 @@ smart_meme = function() {
         }
         elem.className = clazz;
     }
-
+    
     getContent = function() {
         var matches,i, ret = new Array(), post_type, media;
         matches = _getElementByClassName(document);
         for (i=0; i < matches.length; i++) {
 	    media = _recursive_search(matches[i], "img");
-            if (media.src !== undefined) { // ok, found an image. Will use it to post
+            if (media.src !== undefined) { // ok, found an image. Will use it on post
 		ret.post_type = "photo";
 		ret.src = media.src;
 	    }
 	    ret.push("<blockquote>"+matches[i].innerHTML+"</blockquote>\n");
+	    //ret.push(matches[i].innerHTML);
         }
         return ret;
     }
-
     // bottleneck !!
     _recursive_search = function(root, element_type, old_ret) {
 	var ret_obj = {}, i, child;
-	if (old_ret == undefined) old_ret = {};
+	if (typeof(old_ret) === "undefined") old_ret = {};
 	if (root.childNodes && root.childNodes.length > 0) {
 	    child = root.childNodes;
 	    for(i=0; i<child.length; i++) {
@@ -103,6 +104,7 @@ smart_meme = function() {
         return ret;
     }
 
+    // ? not being used ??
     postContent = function() {
 	var params, url;
         params = "action=post&content="+encodeURIComponent(getContent().join(''));

@@ -13,15 +13,16 @@ chrome.extension.onRequest.addListener(
 	  } else {
 	      params += "post_type=text&content="+encodeURIComponent(content.join(''));
 	  }
-	  url = 'http://www.bigodines.com/meme-php/examples/oAuthExample.php?';
-	  sendResponse({url:url+params});
+	  url = 'http://www.bigodines.com/meme-php/examples/oAuthExample.php';
+	  sendResponse({url:url, 
+		      data:params});
 	  
-      } else
+      } else {
 	  sendResponse({}); // snub them.
+      }
   }
 );
 
 document.body.onmousemove = function(e) { 
     smart_meme.eventHandler(e);
 };
-
