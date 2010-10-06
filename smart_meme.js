@@ -1,0 +1,140 @@
+/**
+Smart Meme by bigo
+
+released under BSD license.
+*/
+
+// thanks Mozilla guys! https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array/indexOf
+if (!Array.prototype.indexOf)
+{
+  Array.prototype.indexOf = function(elt /*, from*/)
+  {
+    var len = this.length >>> 0;
+
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0)
+         ? Math.ceil(from)
+         : Math.floor(from);
+    if (from < 0)
+      from += len;
+
+    for (; from < len; from++)
+    {
+      if (from in this &&
+          this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
+
+
+smart_meme = function() {
+    var eventHandler, getContent, postContent, clearSelection, _click, _toggle, _getElementByClassName, _jsonp;
+    eventHandler = function(evt) {
+        var elem,old_border, bindable_elements;
+	elem = evt.srcElement || evt.target;
+	bindable_elements = Array("div", "table", "div", "p", "h1", "h2", "h3", "span", "img");
+	if (bindable_elements.indexOf(elem.nodeName.toLowerCase()) == -1) {
+	    return true;
+	}
+	old_border = elem.style.border | "0px"; // TODO: FIXME
+	elem.style.border = "2px solid";
+	elem.onmouseout = function () { this.style.border = old_border; return true; };
+	elem.onclick = _click;
+    }
+
+    _click = function(elem) {
+        var e = elem.srcElement || elem.target;
+        _toggle(e);
+    }
+
+    _toggle = function(elem) {
+        var clazz = elem.className;
+        if (clazz.indexOf("smart_meme") != -1) {
+            clazz = clazz.replace("smart_meme", "");
+        } else {
+            clazz = clazz + " smart_meme";
+        }
+        elem.className = clazz;
+    }
+
+    getContent = function() {
+        var matches,i, ret = new Array(), post_type, media;
+        matches = _getElementByClassName(document);
+        for (i=0; i < matches.length; i++) {
+	    media = _recursive_search(matches[i], "img");
+            if (media.src !== undefined) { // ok, found an image. Will use it to post
+		ret.post_type = "photo";
+		ret.src = media.src;
+	    }
+	    ret.push("<blockquote>"+matches[i].innerHTML+"</blockquote>\n");
+        }
+        return ret;
+    }
+
+    // bottleneck !!
+    _recursive_search = function(root, element_type, old_ret) {
+	var ret_obj = {}, i, child;
+	if (old_ret == undefined) old_ret = {};
+	if (root.childNodes && root.childNodes.length > 0) {
+	    child = root.childNodes;
+	    for(i=0; i<child.length; i++) {
+		old_ret = _recursive_search(child[i], element_type, old_ret);
+	    }
+	} else {
+	    if (root.nodeName.toLowerCase() == element_type) {
+		ret_obj = { 'post_type' : element_type, 'src' : root.src } 
+	    }
+	}
+	if (old_ret.post_type) return old_ret;
+	return ret_obj;
+    }
+
+    _getElementByClassName = function(root) {
+        var all, ret, i, j;
+        ret = new Array();
+        all = root.getElementsByTagName("*");
+        for (i=0; i < all.length; i++) {
+            if (all[i].className.indexOf("smart_meme") != -1) {
+                ret.push(all[i]);
+            }
+        }
+        return ret;
+    }
+
+    postContent = function() {
+	var params, url;
+        params = "action=post&content="+encodeURIComponent(getContent().join(''));
+	url = 'http://localhost/meme-php/examples/oAuthExample.php';
+	// TODO error-handling
+	//_jsonp(url, params);
+	alert(params);
+    }
+
+    _jsonp = function(url, queryString) {
+	var scr,head;
+	scr = document.createElement("script");
+        scr.type = "text/javascript";
+        scr.src = url + queryString;
+        head = document.getElementsByTagName("head")[0];
+        head.insertBefore(scr, head.firstChild);
+    }
+
+    clearSelection = function() {
+	var matches,i;
+	matches = _getElementByClassName(document);
+	for(i=0; i<matches.length;i++) {
+	    matches[i].className = matches[i].className.replace("smart_meme","");
+	}
+	return true;
+    }
+    
+    return {
+        // public functions
+        eventHandler : eventHandler,
+     	getContent : getContent,
+	postContent : postContent,
+	clearSelection : clearSelection
+    }
+}();

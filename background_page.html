@@ -1,0 +1,31 @@
+<script language="JavaScript" src="smart_meme.js"></script>
+<script>
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.executeScript(null,
+                           {file:"content_script.js",
+                            allFrames: true}
+                           );
+    chrome.browserAction.setPopup({popup:"popup.html"});
+});
+
+// TODO REFACTOR THESE FUNCTIONS!!
+function clear() {
+    chrome.tabs.getSelected(null, function(tab) {
+        chrome.tabs.sendRequest(tab.id, {cmd: "clear"});
+    });
+}
+
+function post() {
+    chrome.tabs.getSelected(null, function(tab) {
+        chrome.tabs.sendRequest(tab.id, {cmd: "post"}, function(response) {
+          if (!response.url) return false;
+          try {
+	      chrome.tabs.create({'url':response.url, 'selected': true});
+	  } catch (e) {
+	      alert(e);
+	  }
+        });
+    });
+}
+</script>
