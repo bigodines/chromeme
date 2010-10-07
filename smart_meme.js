@@ -28,27 +28,34 @@ String.prototype.trim = function () {
 };
 
 smart_meme = function() {
-    var eventHandler, getContent, postContent, clearSelection, _click, _toggle, _getElementByClassName, _jsonp;
+    var eventHandler, getContent, postContent, clearSelection, _click, _toggle, _getElementByClassName,  _mouseout;
     
+    _click = function(elem) {
+        var e = elem.srcElement || elem.target;
+        _toggle(e);
+    }
+
+
     eventHandler = function(evt) {
         var elem,old_border, bindable_elements;
 
-	elem = evt.srcElement || evt.target;
-	bindable_elements = Array("div", "table", "p", "h1", "h2", "h3", "span", "img");
-	if (bindable_elements.indexOf(elem.nodeName.toLowerCase()) == -1) {
-	    return true;
-	}
-	old_border = elem.style.border | "0px"; // TODO: FIXME
-	elem.style.border = "2px solid";
-	elem.onmouseout = function () { this.style.border = old_border; return true; };
-	elem.onclick = _click;
+        elem = evt.srcElement || evt.target;
+        bindable_elements = Array("div", "table", "p", "h1", "h2", "h3", "span", "img", "embed");
+        if (bindable_elements.indexOf(elem.nodeName.toLowerCase()) == -1) {
+            return true;
+        }
+        old_border = elem.style.border | "0px"; // TODO: FIXME
+        elem.style.border = "2px solid";
+
+        elem.onmouseout = function () { this.style.border = old_border; return true; };
+        
+        elem.addEventListener("click", _click, true);
     }
 
-    _click = function(elem) {
-        var e = elem.srcElement || elem.target;
-
-        _toggle(e);
-    }
+    _mouseout = function(elem) {
+        //        var e = elem.srcElement || elem.target;
+        // e.style.border = 0px;
+    };
 
     _toggle = function(elem) {
         var clazz = elem.className;
@@ -68,33 +75,39 @@ smart_meme = function() {
 
         matches = _getElementByClassName(document);
         for (i=0; i < matches.length; i++) {
-	    media = _recursive_search(matches[i], "img");
+            media = _recursive_search(matches[i], "embed");
             if (media.src !== undefined) { // ok, found an image. Will use it on post
-		ret.post_type = "photo";
-		ret.src = media.src;
-	    }
-	    ret.push("<blockquote>"+encodeURIComponent(matches[i].innerHTML)+"</blockquote>\n");
-	    //ret.push(matches[i].innerHTML);
+                ret.post_type = "video";
+                ret.src = media.src;
+            } else {
+                media = _recursive_search(matches[i], "img");
+                if (media.src !== undefined) { // wuuuU!!! found video!!
+                    ret.post_type = "photo";
+                    ret.src = media.src;
+                }
+            }
+            ret.push("<blockquote>"+encodeURIComponent(matches[i].innerHTML)+"</blockquote>\n");
+            //ret.push(matches[i].innerHTML);
         }
         return ret;
     }
     // bottleneck !!
     _recursive_search = function(root, element_type, old_ret) {
-	var ret_obj = {}, i, child;
+        var ret_obj = {}, i, child;
 
-	if (typeof(old_ret) === "undefined") old_ret = {};
-	if (root.childNodes && root.childNodes.length > 0) {
-	    child = root.childNodes;
-	    for(i=0; i<child.length; i++) {
-		old_ret = _recursive_search(child[i], element_type, old_ret);
-	    }
-	} else {
-	    if (root.nodeName.toLowerCase() == element_type) {
-		ret_obj = { 'post_type' : element_type, 'src' : root.src } 
-	    }
-	}
-	if (old_ret.post_type) return old_ret;
-	return ret_obj;
+        if (typeof(old_ret) === "undefined") old_ret = {};
+        if (root.childNodes && root.childNodes.length > 0) {
+            child = root.childNodes;
+            for(i=0; i<child.length; i++) {
+                old_ret = _recursive_search(child[i], element_type, old_ret);
+            }
+        } else {
+            if (root.nodeName.toLowerCase() == element_type) {
+                ret_obj = { 'post_type' : element_type, 'src' : root.src } 
+            }
+        }
+        if (old_ret.post_type) return old_ret;
+        return ret_obj;
     }
 
     _getElementByClassName = function(root) {
@@ -110,42 +123,21 @@ smart_meme = function() {
         return ret;
     }
 
-    /*// ? not being used ??
-    postContent = function() {
-	var params, url;
-
-        params = "action=post&content="+encodeURIComponent(getContent().join(''));
-	url = 'http://localhost/meme-php/examples/oAuthExample.php';
-	// TODO error-handling
-	//_jsonp(url, params);
-	alert(params);
-	}*/
-
-    _jsonp = function(url, queryString) {
-	var scr,head;
-
-	scr = document.createElement("script");
-        scr.type = "text/javascript";
-        scr.src = url + queryString;
-        head = document.getElementsByTagName("head")[0];
-        head.insertBefore(scr, head.firstChild);
-    }
-
     clearSelection = function() {
-	var matches,i;
-
-	matches = _getElementByClassName(document);
-	for(i=0; i<matches.length;i++) {
-	    matches[i].className = matches[i].className.replace("smart_meme","");
-	}
-	return true;
+        var matches,i;
+        
+        matches = _getElementByClassName(document);
+        for(i=0; i<matches.length;i++) {
+            matches[i].className = matches[i].className.replace("smart_meme","");
+        }
+        return true;
     }
     
     return {
         // public functions
         eventHandler : eventHandler,
      	getContent : getContent,
-	postContent : postContent,
-	clearSelection : clearSelection
+        postContent : postContent,
+        clearSelection : clearSelection
     }
 }();

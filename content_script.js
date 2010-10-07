@@ -33,6 +33,3 @@ move_inspector = function(e) {
     smart_meme.eventHandler(e);
 };
 
-//document.body.onmousemove = move_inspector;
-
-
