@@ -1,3 +1,7 @@
 .smart_meme {
     background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: yellow;
+    z-index: 666;
 }

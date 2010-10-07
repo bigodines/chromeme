@@ -24,5 +24,6 @@ chrome.extension.onRequest.addListener(
 );
 
 document.body.onmousemove = function(e) { 
+    
     smart_meme.eventHandler(e);
 };

@@ -28,14 +28,18 @@ if (!Array.prototype.indexOf)
   };
 }
 
+String.prototype.trim = function () {
+    return this.replace(/^\s*/,"").replace(/\s*$/,"");
+};
 
 smart_meme = function() {
     var eventHandler, getContent, postContent, clearSelection, _click, _toggle, _getElementByClassName, _jsonp;
     
     eventHandler = function(evt) {
         var elem,old_border, bindable_elements;
+
 	elem = evt.srcElement || evt.target;
-	bindable_elements = Array("div", "table", "div", "p", "h1", "h2", "h3", "span", "img");
+	bindable_elements = Array("div", "table", "p", "h1", "h2", "h3", "span", "img");
 	if (bindable_elements.indexOf(elem.nodeName.toLowerCase()) == -1) {
 	    return true;
 	}
@@ -47,21 +51,26 @@ smart_meme = function() {
 
     _click = function(elem) {
         var e = elem.srcElement || elem.target;
+
         _toggle(e);
     }
 
     _toggle = function(elem) {
         var clazz = elem.className;
+
         if (clazz.indexOf("smart_meme") != -1) {
             clazz = clazz.replace("smart_meme", "");
         } else {
             clazz = clazz + " smart_meme";
         }
-        elem.className = clazz;
+	console.log(elem.className);
+
+        elem.className = clazz.trim();
     }
     
     getContent = function() {
         var matches,i, ret = new Array(), post_type, media;
+
         matches = _getElementByClassName(document);
         for (i=0; i < matches.length; i++) {
 	    media = _recursive_search(matches[i], "img");
@@ -69,7 +78,7 @@ smart_meme = function() {
 		ret.post_type = "photo";
 		ret.src = media.src;
 	    }
-	    ret.push("<blockquote>"+matches[i].innerHTML+"</blockquote>\n");
+	    ret.push("<blockquote>"+encodeURIComponent(matches[i].innerHTML)+"</blockquote>\n");
 	    //ret.push(matches[i].innerHTML);
         }
         return ret;
@@ -77,6 +86,7 @@ smart_meme = function() {
     // bottleneck !!
     _recursive_search = function(root, element_type, old_ret) {
 	var ret_obj = {}, i, child;
+
 	if (typeof(old_ret) === "undefined") old_ret = {};
 	if (root.childNodes && root.childNodes.length > 0) {
 	    child = root.childNodes;
@@ -94,6 +104,7 @@ smart_meme = function() {
 
     _getElementByClassName = function(root) {
         var all, ret, i, j;
+
         ret = new Array();
         all = root.getElementsByTagName("*");
         for (i=0; i < all.length; i++) {
@@ -104,18 +115,20 @@ smart_meme = function() {
         return ret;
     }
 
-    // ? not being used ??
+    /*// ? not being used ??
     postContent = function() {
 	var params, url;
+
         params = "action=post&content="+encodeURIComponent(getContent().join(''));
 	url = 'http://localhost/meme-php/examples/oAuthExample.php';
 	// TODO error-handling
 	//_jsonp(url, params);
 	alert(params);
-    }
+	}*/
 
     _jsonp = function(url, queryString) {
 	var scr,head;
+
 	scr = document.createElement("script");
         scr.type = "text/javascript";
         scr.src = url + queryString;
@@ -125,6 +138,7 @@ smart_meme = function() {
 
     clearSelection = function() {
 	var matches,i;
+
 	matches = _getElementByClassName(document);
 	for(i=0; i<matches.length;i++) {
 	    matches[i].className = matches[i].className.replace("smart_meme","");
