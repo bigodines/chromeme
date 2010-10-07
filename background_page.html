@@ -13,12 +13,13 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.browserAction.setPopup({popup:"popup.html"});
 });
 
-// TODO REFACTOR THESE FUNCTIONS!!
-function clear() {
+// bind, unbind and clear are simple commands
+function simple_command(command) {
     chrome.tabs.getSelected(null, function(tab) {
-        chrome.tabs.sendRequest(tab.id, {cmd: "clear"});
+        chrome.tabs.sendRequest(tab.id, {cmd: command});
     });
 }
+
 function post() {
     chrome.tabs.getSelected(null, function(tab) {
         chrome.tabs.sendRequest(tab.id, {cmd: "post"}, function(response) {
