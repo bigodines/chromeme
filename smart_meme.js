@@ -33,7 +33,7 @@ smart_meme = function() {
     _click = function(elem) {
         var e = elem.srcElement || elem.target;
         _toggle(e);
-    }
+    };
 
 
     eventHandler = function(evt) {
@@ -50,7 +50,8 @@ smart_meme = function() {
         elem.onmouseout = function () { this.style.border = old_border; return true; };
         
         elem.addEventListener("click", _click, true);
-    }
+        return true;
+    };
 
     _mouseout = function(elem) {
         //        var e = elem.srcElement || elem.target;
@@ -65,10 +66,10 @@ smart_meme = function() {
         } else {
             clazz = clazz + " smart_meme";
         }
-	console.log(elem.className);
+	    console.log(elem.className);
 
         elem.className = clazz.trim();
-    }
+    };
     
     getContent = function() {
         var matches,i, ret = new Array(), post_type, media;
@@ -90,7 +91,7 @@ smart_meme = function() {
             //ret.push(matches[i].innerHTML);
         }
         return ret;
-    }
+    };
     // bottleneck !!
     _recursive_search = function(root, element_type, old_ret) {
         var ret_obj = {}, i, child;
@@ -103,12 +104,12 @@ smart_meme = function() {
             }
         } else {
             if (root.nodeName.toLowerCase() == element_type) {
-                ret_obj = { 'post_type' : element_type, 'src' : root.src } 
+                ret_obj = { 'post_type' : element_type, 'src' : root.src };
             }
         }
         if (old_ret.post_type) return old_ret;
         return ret_obj;
-    }
+    };
 
     _getElementByClassName = function(root) {
         var all, ret, i, j;
@@ -121,7 +122,7 @@ smart_meme = function() {
             }
         }
         return ret;
-    }
+    };
 
     clearSelection = function() {
         var matches,i;
@@ -131,7 +132,7 @@ smart_meme = function() {
             matches[i].className = matches[i].className.replace("smart_meme","");
         }
         return true;
-    }
+    };
     
     return {
         // public functions
@@ -139,5 +140,6 @@ smart_meme = function() {
      	getContent : getContent,
         postContent : postContent,
         clearSelection : clearSelection
-    }
+    };
+
 }();
