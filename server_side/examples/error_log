@@ -1,0 +1,300 @@
+[07-Oct-2010 16:18:21] Fetching https://api.login.yahoo.com/oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dtext&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=561ded0c06aadc4ebe36ddbd32520d00&oauth_signature=QeRVK5tdItCe5EiOGqu%2BAIjB6d0%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486301&oauth_version=1.0&xoauth_lang_pref=en, method=GET, headers=array (
+), response=array (
+  'url' => 'https://api.login.yahoo.com/oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dtext&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=561ded0c06aadc4ebe36ddbd32520d00&oauth_signature=QeRVK5tdItCe5EiOGqu%2BAIjB6d0%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486301&oauth_version=1.0&xoauth_lang_pref=en',
+  'content_type' => 'text/plain; charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 360,
+  'request_size' => 607,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.275818,
+  'namelookup_time' => 0.024031,
+  'connect_time' => 0.035375,
+  'pretransfer_time' => 0.060165,
+  'size_upload' => 0,
+  'size_download' => 241,
+  'speed_download' => 873,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.275563,
+  'redirect_time' => 0,
+  'request_header' => 'GET /oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dtext&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=561ded0c06aadc4ebe36ddbd32520d00&oauth_signature=QeRVK5tdItCe5EiOGqu%2BAIjB6d0%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486301&oauth_version=1.0&xoauth_lang_pref=en HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: api.login.yahoo.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'oauth_token=uvfawuq&oauth_token_secret=985b5ffb9695768384b9b5eabd1e800aa0201891&oauth_expires_in=3600&xoauth_request_auth_url=https%3A%2F%2Fapi.login.yahoo.com%2Foauth%2Fv2%2Frequest_auth%3Foauth_token%3Duvfawuq&oauth_callback_confirmed=true',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Thu, 07 Oct 2010 21:18:21 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/plain; charset=utf-8',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Thu, 07 Oct 2010 21:18:21 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Connection' => 'close',
+    'Transfer-Encoding' => 'chunked',
+    'Content-Type' => 'text/plain; charset=utf-8',
+  ),
+)
+[07-Oct-2010 16:18:28] Fetching https://api.login.yahoo.com/oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=0ed3875e8bd53814a89bfb6475f36830&oauth_signature=kIGI5X53XU%2FAn2nyUl2JuK3jhEU%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=uvfawuq&oauth_verifier=kd9nyu&oauth_version=1.0, method=GET, headers=array (
+), response=array (
+  'url' => 'https://api.login.yahoo.com/oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=0ed3875e8bd53814a89bfb6475f36830&oauth_signature=kIGI5X53XU%2FAn2nyUl2JuK3jhEU%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=uvfawuq&oauth_verifier=kd9nyu&oauth_version=1.0',
+  'content_type' => 'text/plain; charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 360,
+  'request_size' => 493,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.050056,
+  'namelookup_time' => 0.002855,
+  'connect_time' => 0.005061,
+  'pretransfer_time' => 0.023677,
+  'size_upload' => 0,
+  'size_download' => 1018,
+  'speed_download' => 20337,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.049805,
+  'redirect_time' => 0,
+  'request_header' => 'GET /oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=0ed3875e8bd53814a89bfb6475f36830&oauth_signature=kIGI5X53XU%2FAn2nyUl2JuK3jhEU%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=uvfawuq&oauth_verifier=kd9nyu&oauth_version=1.0 HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: api.login.yahoo.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'oauth_token=A%3DQdEgtnDioh.b26MelSMtYQhViEUutXedur7Ov4hPcpTO0rYAKvtjFCEE1I4vQZy.Ugi6DhRatiEesPhTBIFY2cPAXnNT2hUyqcECf4LEWxvWghlkldTONxFimPcEcrMwXwjWvNGlyYnpz_mUrY6Lp4oUKZHwk4tGUXrZj_d_8uM3u.jJoI3Wibj4b89gLsqX6V_EA579p.wFtbrvTsUAdfS5RAb8CNe2pSYkHeaK8l0cRik78JrsTE4I6gyWMb10rTBfknO6.Uh5q818S4T28OpiLmuhrePyKEKVe9q_lf4.0RLu.53Uu8CjJxTM0rw.HujPQFszR4jTqX5fh.fhzJSVJCslcK66aeB5_rpg0AgkKwNPj72iqGox7HGNve0v5qk6gzIU9rCDz6YQn.IxDbpguK19acYlQh3eEOn_ClWCgbg9r2bm5oRUyxqlkK0bwppmrB8c7G4SZYMLyvLV_iwq43fayqQA_.I9B2SDsSgJCn8b4CmkFCdK6T.1lGR9zgXvtIgdJ.ex3iUzbbxrts4UY0jqn_QBSkG6ntUNiGWA0WrI_HnHs6jUfOwvCOd9kD0_JlDTM5NzdygjJGZLJzCgRlvtDai850llnLNnj8wvhichpXscQ59PnOLReLTwQ28RLxzCU86PVryHnwDQfss6ifg_wZ0Bywt1WmnDTHBbJdmLIsKM28MXoKDqDSE6f9nm1Fz6abpHmqPTBfHtbbdBiiEdcpiREhB19Xu1ZA--&oauth_token_secret=4c9e3af9afa88d1a760ba6a89933839a3fdae2e9&oauth_expires_in=3600&oauth_session_handle=AM3irEygk2icdKXlevjMLYX7VO4eT4Q6Fg6I4zY2RNHp_gjm_BRwOw88F8VAs.q2&oauth_authorization_expires_in=860997339&xoauth_yahoo_guid=OFQMEF5DOCIUWA6TVTUZUF35VI',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Thu, 07 Oct 2010 21:18:28 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/plain; charset=utf-8',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Thu, 07 Oct 2010 21:18:28 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Connection' => 'close',
+    'Transfer-Encoding' => 'chunked',
+    'Content-Type' => 'text/plain; charset=utf-8',
+  ),
+)
+[07-Oct-2010 16:18:28] Fetching http://query.yahooapis.com/v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=d5c4d1d30d85e3d615811cd8e4508e4e&oauth_signature=9gGIAzsIocPopwWsx4jzEx%2FCcYc%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=A%3DQdEgtnDioh.b26MelSMtYQhViEUutXedur7Ov4hPcpTO0rYAKvtjFCEE1I4vQZy.Ugi6DhRatiEesPhTBIFY2cPAXnNT2hUyqcECf4LEWxvWghlkldTONxFimPcEcrMwXwjWvNGlyYnpz_mUrY6Lp4oUKZHwk4tGUXrZj_d_8uM3u.jJoI3Wibj4b89gLsqX6V_EA579p.wFtbrvTsUAdfS5RAb8CNe2pSYkHeaK8l0cRik78JrsTE4I6gyWMb10rTBfknO6.Uh5q818S4T28OpiLmuhrePyKEKVe9q_lf4.0RLu.53Uu8CjJxTM0rw.HujPQFszR4jTqX5fh.fhzJSVJCslcK66aeB5_rpg0AgkKwNPj72iqGox7HGNve0v5qk6gzIU9rCDz6YQn.IxDbpguK19acYlQh3eEOn_ClWCgbg9r2bm5oRUyxqlkK0bwppmrB8c7G4SZYMLyvLV_iwq43fayqQA_.I9B2SDsSgJCn8b4CmkFCdK6T.1lGR9zgXvtIgdJ.ex3iUzbbxrts4UY0jqn_QBSkG6ntUNiGWA0WrI_HnHs6jUfOwvCOd9kD0_JlDTM5NzdygjJGZLJzCgRlvtDai850llnLNnj8wvhichpXscQ59PnOLReLTwQ28RLxzCU86PVryHnwDQfss6ifg_wZ0Bywt1WmnDTHBbJdmLIsKM28MXoKDqDSE6f9nm1Fz6abpHmqPTBfHtbbdBiiEdcpiREhB19Xu1ZA--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28%20type%2C%20content%20%29%20VALUES%20%28%20%27text%27%20%2C%27%3Cblockquote%3EAquilo%20ali%20foram%20uns%20f%C3%A3s%20que%20fizeram%20um%20videozinho%20v%C3%A1lido%20para%20YouTube%20e%20quiseram%20chamar%20aten%C3%A7%C3%A3o.%20Espertinhos%2C%20sim.%20Profissionais%E2%80%A6%20Hm%2C%20nem%20tanto.%20Eu%20duvido%20que%20um%20est%C3%BAdio%20foda%20de%20Hollywood%20iria%20fundar%20Apok%C3%A9lipse.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EE%20TAMB%C3%89M%20a%20dica%20de%20app%20pra%20iPhone%2C%20o%20%3Cem%3EWhatsApp%3C%2Fem%3E%2C%20muito%20foda.%20Ent%C3%A3o%20assiste%20l%C3%A1%20e%20se%20tiver%20qualquer%20d%C3%BAvida%2C%20me%20tu%C3%ADta%20que%20eu%20gosto%3A%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftwitter.com%2Fcarolzara%5C%22%20target%3D%5C%22_blank%5C%22%3E%40carolzara%3C%2Fa%3E%3C%2Fblockquote%3E%0D%0A%27%29, method=GET, headers=array (
+), response=array (
+  'url' => 'http://query.yahooapis.com/v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=d5c4d1d30d85e3d615811cd8e4508e4e&oauth_signature=9gGIAzsIocPopwWsx4jzEx%2FCcYc%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=A%3DQdEgtnDioh.b26MelSMtYQhViEUutXedur7Ov4hPcpTO0rYAKvtjFCEE1I4vQZy.Ugi6DhRatiEesPhTBIFY2cPAXnNT2hUyqcECf4LEWxvWghlkldTONxFimPcEcrMwXwjWvNGlyYnpz_mUrY6Lp4oUKZHwk4tGUXrZj_d_8uM3u.jJoI3Wibj4b89gLsqX6V_EA579p.wFtbrvTsUAdfS5RAb8CNe2pSYkHeaK8l0cRik78JrsTE4I6gyWMb10rTBfknO6.Uh5q818S4T28OpiLmuhrePyKEKVe9q_lf4.0RLu.53Uu8CjJxTM0rw.HujPQFszR4jTqX5fh.fhzJSVJCslcK66aeB5_rpg0AgkKwNPj72iqGox7HGNve0v5qk6gzIU9rCDz6YQn.IxDbpguK19acYlQh3eEOn_ClWCgbg9r2bm5oRUyxqlkK0bwppmrB8c7G4SZYMLyvLV_iwq43fayqQA_.I9B2SDsSgJCn8b4CmkFCdK6T.1lGR9zgXvtIgdJ.ex3iUzbbxrts4UY0jqn_QBSkG6ntUNiGWA0WrI_HnHs6jUfOwvCOd9kD0_JlDTM5NzdygjJGZLJzCgRlvtDai850llnLNnj8wvhichpXscQ59PnOLReLTwQ28RLxzCU86PVryHnwDQfss6ifg_wZ0Bywt1WmnDTHBbJdmLIsKM28MXoKDqDSE6f9nm1Fz6abpHmqPTBfHtbbdBiiEdcpiREhB19Xu1ZA--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28%20type%2C%20content%20%29%20VALUES%20%28%20%27text%27%20%2C%27%3Cblockquote%3EAquilo%20ali%20foram%20uns%20f%C3%A3s%20que%20fizeram%20um%20videozinho%20v%C3%A1lido%20para%20YouTube%20e%20quiseram%20chamar%20aten%C3%A7%C3%A3o.%20Espertinhos%2C%20sim.%20Profissionais%E2%80%A6%20Hm%2C%20nem%20tanto.%20Eu%20duvido%20que%20um%20est%C3%BAdio%20foda%20de%20Hollywood%20iria%20fundar%20Apok%C3%A9lipse.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EE%20TAMB%C3%89M%20a%20dica%20de%20app%20pra%20iPhone%2C%20o%20%3Cem%3EWhatsApp%3C%2Fem%3E%2C%20muito%20foda.%20Ent%C3%A3o%20assiste%20l%C3%A1%20e%20se%20tiver%20qualquer%20d%C3%BAvida%2C%20me%20tu%C3%ADta%20que%20eu%20gosto%3A%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftwitter.com%2Fcarolzara%5C%22%20target%3D%5C%22_blank%5C%22%3E%40carolzara%3C%2Fa%3E%3C%2Fblockquote%3E%0D%0A%27%29',
+  'content_type' => 'text/javascript;charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 513,
+  'request_size' => 2133,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.383549,
+  'namelookup_time' => 0.002127,
+  'connect_time' => 0.003875,
+  'pretransfer_time' => 0.003883,
+  'size_upload' => 0,
+  'size_download' => 626,
+  'speed_download' => 1632,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.383262,
+  'redirect_time' => 0,
+  'request_header' => 'GET /v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=d5c4d1d30d85e3d615811cd8e4508e4e&oauth_signature=9gGIAzsIocPopwWsx4jzEx%2FCcYc%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286486308&oauth_token=A%3DQdEgtnDioh.b26MelSMtYQhViEUutXedur7Ov4hPcpTO0rYAKvtjFCEE1I4vQZy.Ugi6DhRatiEesPhTBIFY2cPAXnNT2hUyqcECf4LEWxvWghlkldTONxFimPcEcrMwXwjWvNGlyYnpz_mUrY6Lp4oUKZHwk4tGUXrZj_d_8uM3u.jJoI3Wibj4b89gLsqX6V_EA579p.wFtbrvTsUAdfS5RAb8CNe2pSYkHeaK8l0cRik78JrsTE4I6gyWMb10rTBfknO6.Uh5q818S4T28OpiLmuhrePyKEKVe9q_lf4.0RLu.53Uu8CjJxTM0rw.HujPQFszR4jTqX5fh.fhzJSVJCslcK66aeB5_rpg0AgkKwNPj72iqGox7HGNve0v5qk6gzIU9rCDz6YQn.IxDbpguK19acYlQh3eEOn_ClWCgbg9r2bm5oRUyxqlkK0bwppmrB8c7G4SZYMLyvLV_iwq43fayqQA_.I9B2SDsSgJCn8b4CmkFCdK6T.1lGR9zgXvtIgdJ.ex3iUzbbxrts4UY0jqn_QBSkG6ntUNiGWA0WrI_HnHs6jUfOwvCOd9kD0_JlDTM5NzdygjJGZLJzCgRlvtDai850llnLNnj8wvhichpXscQ59PnOLReLTwQ28RLxzCU86PVryHnwDQfss6ifg_wZ0Bywt1WmnDTHBbJdmLIsKM28MXoKDqDSE6f9nm1Fz6abpHmqPTBfHtbbdBiiEdcpiREhB19Xu1ZA--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28%20type%2C%20content%20%29%20VALUES%20%28%20%27text%27%20%2C%27%3Cblockquote%3EAquilo%20ali%20foram%20uns%20f%C3%A3s%20que%20fizeram%20um%20videozinho%20v%C3%A1lido%20para%20YouTube%20e%20quiseram%20chamar%20aten%C3%A7%C3%A3o.%20Espertinhos%2C%20sim.%20Profissionais%E2%80%A6%20Hm%2C%20nem%20tanto.%20Eu%20duvido%20que%20um%20est%C3%BAdio%20foda%20de%20Hollywood%20iria%20fundar%20Apok%C3%A9lipse.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EE%20TAMB%C3%89M%20a%20dica%20de%20app%20pra%20iPhone%2C%20o%20%3Cem%3EWhatsApp%3C%2Fem%3E%2C%20muito%20foda.%20Ent%C3%A3o%20assiste%20l%C3%A1%20e%20se%20tiver%20qualquer%20d%C3%BAvida%2C%20me%20tu%C3%ADta%20que%20eu%20gosto%3A%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftwitter.com%2Fcarolzara%5C%22%20target%3D%5C%22_blank%5C%22%3E%40carolzara%3C%2Fa%3E%3C%2Fblockquote%3E%0D%0A%27%29 HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: query.yahooapis.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'void({"query":{"count":"1","created":"2010-10-07T21:18:28Z","lang":"en-US","results":{"status":{"code":"200","message":"ok","post":{"pubid":"yow8zf_","guid":"OFQMEF5DOCIUWA6TVTUZUF35VI","url":"http://meme.yahoo.com/daime/p/yow8zf_/","timestamp":"1286486308655","category":"text","type":"text","content":"<blockquote>Aquilo ali foram uns fãs que fizeram um videozinho válido para YouTube e quiseram chamar atenção. Espertinhos, sim. Profissionais… Hm, nem tanto. Eu duvido que um estúdio foda de Hollywood iria fundar Apokélipse.</blockquote>\\n<blockquote>E TAMBÉM a dica de app pra iPhone, o <em>WhatsApp</em>, muito foda. Então assiste lá e se tiver qualquer dúvida, me tuíta que eu gosto: <a rel=\\"nofollow\\">@carolzara</a></blockquote>","repost_count":"0","appid":"lQhbjk58","comment":"","caption":"","via_guid":null,"origin_guid":null,"origin_pubid":null,"latitude":null,"longitude":null}}}}});',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Thu, 07 Oct 2010 21:18:28 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=299
+Vary: Accept-Encoding
+Content-Type: text/javascript;charset=utf-8
+Content-Encoding: gzip
+Age: 0
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: YTS/1.17.21',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Thu, 07 Oct 2010 21:18:28 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Access-Control-Allow-Origin' => '*',
+    'Cache-Control' => 'public, max-age=299',
+    'Vary' => 'Accept-Encoding',
+    'Content-Type' => 'text/javascript;charset=utf-8',
+    'Content-Encoding' => 'gzip',
+    'Age' => '0',
+    'Transfer-Encoding' => 'chunked',
+    'Connection' => 'keep-alive',
+    'Server' => 'YTS/1.17.21',
+  ),
+)
+[08-Oct-2010 13:35:42] Fetching https://api.login.yahoo.com/oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dphoto&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=38cca0c0efdfca517ffe3f610165171f&oauth_signature=W25wUqQ5nPJ%2Bvyu6J3qwke9DC4Q%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562942&oauth_version=1.0&xoauth_lang_pref=en, method=GET, headers=array (
+), response=array (
+  'url' => 'https://api.login.yahoo.com/oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dphoto&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=38cca0c0efdfca517ffe3f610165171f&oauth_signature=W25wUqQ5nPJ%2Bvyu6J3qwke9DC4Q%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562942&oauth_version=1.0&xoauth_lang_pref=en',
+  'content_type' => 'text/plain; charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 360,
+  'request_size' => 608,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.208737,
+  'namelookup_time' => 0.004535,
+  'connect_time' => 0.006665,
+  'pretransfer_time' => 0.025667,
+  'size_upload' => 0,
+  'size_download' => 241,
+  'speed_download' => 1154,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.208495,
+  'redirect_time' => 0,
+  'request_header' => 'GET /oauth/v2/get_request_token?oauth_callback=http%3A%2F%2Fwww.bigodines.com%2Fmeme-php%2Fexamples%2FoAuthExample.php%3Faction%3Dauthorized%26post_type%3Dphoto&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=38cca0c0efdfca517ffe3f610165171f&oauth_signature=W25wUqQ5nPJ%2Bvyu6J3qwke9DC4Q%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562942&oauth_version=1.0&xoauth_lang_pref=en HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: api.login.yahoo.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'oauth_token=usm4cam&oauth_token_secret=bb71b0e2a810bdb0f34185ade7c552b330cfea20&oauth_expires_in=3600&xoauth_request_auth_url=https%3A%2F%2Fapi.login.yahoo.com%2Foauth%2Fv2%2Frequest_auth%3Foauth_token%3Dusm4cam&oauth_callback_confirmed=true',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Fri, 08 Oct 2010 18:35:42 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/plain; charset=utf-8',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Fri, 08 Oct 2010 18:35:42 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Connection' => 'close',
+    'Transfer-Encoding' => 'chunked',
+    'Content-Type' => 'text/plain; charset=utf-8',
+  ),
+)
+[08-Oct-2010 13:35:48] Fetching https://api.login.yahoo.com/oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=497301c72f22baf04457ab7ecaac52f3&oauth_signature=5G2aPl7736zvArVMh79dwDIheJk%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=usm4cam&oauth_verifier=ecfnzv&oauth_version=1.0, method=GET, headers=array (
+), response=array (
+  'url' => 'https://api.login.yahoo.com/oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=497301c72f22baf04457ab7ecaac52f3&oauth_signature=5G2aPl7736zvArVMh79dwDIheJk%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=usm4cam&oauth_verifier=ecfnzv&oauth_version=1.0',
+  'content_type' => 'text/plain; charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 360,
+  'request_size' => 491,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.076348,
+  'namelookup_time' => 0.016348,
+  'connect_time' => 0.018449,
+  'pretransfer_time' => 0.046267,
+  'size_upload' => 0,
+  'size_download' => 1018,
+  'speed_download' => 13333,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.076108,
+  'redirect_time' => 0,
+  'request_header' => 'GET /oauth/v2/get_token?oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=497301c72f22baf04457ab7ecaac52f3&oauth_signature=5G2aPl7736zvArVMh79dwDIheJk%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=usm4cam&oauth_verifier=ecfnzv&oauth_version=1.0 HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: api.login.yahoo.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'oauth_token=A%3D7vPR1P7Oj13wiSmZH1P.gMsWtwZ6bDDphSBd6XnjvQHziai.yovUPPRFTaqAdg1lAUO5Vi7ry3S.wEO_9cuqczeabVtMWM0T5hP9KBL8WcUZthilRXjqIx_caIXYiPnkTC_7G2i17XazZi2mVn6RLbCyd90EhRaGfYv9Q3AnDwGOKjm3RLtNEPQcNJbDeu993RvQOJQZrtzMvNyaXNMBxrViTo6kV3poh78aSD49M2CZsql3gxjEcrTLAU4jdylyrAlHS1s_Bmvi9Pc93E6sY9_gGxjbsGPH2v2piaVeEDYhC0afmbuGYjSulumadODvaTvx8_O3wwZ1CUsPYyGPT71R4KPL7Tvxi2Mmk2VznzmvokMaC0.amKw2ofLzUS_eFCCQSv7kuswGkHZm9HGd9b64ezeoTXn92598QF.x5RWgsZwPmrkKX1z5aqNJHfAdXuQslwa3Ykn8v5el_VF_zShMx4cERZA.0Qn.i8PBNtYxcYKHP8i6A6cea3lJ5MHdw8qGvy3E2q0Nc6C_34E.Ph0RjqbWh6LtKVBsB2pqXiY1wemHUZYGQ6YnAZv2uTWyzQWjrMdBCWQ10Nb.uT6GR1y3QommUXICAUN.Dy7HZRicoxG7HogAXyxAkSYrDxrm0_Orfdlebsx.UCt.STmadE1VKjkue5IRjUwFhkE_jY85hoot8Xg9P0Z311Tw4uDE1GXm243mzR0Q5GoRvutnymTz51sGDH4LaAUm2VEEdQ--&oauth_token_secret=b023e03d37e60284919d639b49ba17b2fb89812f&oauth_expires_in=3600&oauth_session_handle=AM3irEygk2icdKXlevjMLYX7VO4eT4Q6Fg6I4zY2RNHp_gjm_BRwOw88F8VAs.q2&oauth_authorization_expires_in=860920699&xoauth_yahoo_guid=OFQMEF5DOCIUWA6TVTUZUF35VI',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Fri, 08 Oct 2010 18:35:48 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/plain; charset=utf-8',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Fri, 08 Oct 2010 18:35:48 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Connection' => 'close',
+    'Transfer-Encoding' => 'chunked',
+    'Content-Type' => 'text/plain; charset=utf-8',
+  ),
+)
+[08-Oct-2010 13:35:49] Fetching http://query.yahooapis.com/v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=85d6ebc1aaaca4788304bfff09039f14&oauth_signature=3BRIAqkwAA%2BT8nAek6k6%2BifViP8%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=A%3D7vPR1P7Oj13wiSmZH1P.gMsWtwZ6bDDphSBd6XnjvQHziai.yovUPPRFTaqAdg1lAUO5Vi7ry3S.wEO_9cuqczeabVtMWM0T5hP9KBL8WcUZthilRXjqIx_caIXYiPnkTC_7G2i17XazZi2mVn6RLbCyd90EhRaGfYv9Q3AnDwGOKjm3RLtNEPQcNJbDeu993RvQOJQZrtzMvNyaXNMBxrViTo6kV3poh78aSD49M2CZsql3gxjEcrTLAU4jdylyrAlHS1s_Bmvi9Pc93E6sY9_gGxjbsGPH2v2piaVeEDYhC0afmbuGYjSulumadODvaTvx8_O3wwZ1CUsPYyGPT71R4KPL7Tvxi2Mmk2VznzmvokMaC0.amKw2ofLzUS_eFCCQSv7kuswGkHZm9HGd9b64ezeoTXn92598QF.x5RWgsZwPmrkKX1z5aqNJHfAdXuQslwa3Ykn8v5el_VF_zShMx4cERZA.0Qn.i8PBNtYxcYKHP8i6A6cea3lJ5MHdw8qGvy3E2q0Nc6C_34E.Ph0RjqbWh6LtKVBsB2pqXiY1wemHUZYGQ6YnAZv2uTWyzQWjrMdBCWQ10Nb.uT6GR1y3QommUXICAUN.Dy7HZRicoxG7HogAXyxAkSYrDxrm0_Orfdlebsx.UCt.STmadE1VKjkue5IRjUwFhkE_jY85hoot8Xg9P0Z311Tw4uDE1GXm243mzR0Q5GoRvutnymTz51sGDH4LaAUm2VEEdQ--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28type%2C%20content%2C%20caption%29%20VALUES%20%28%27photo%27%2C%20%27http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%27%2C%20%27%3Cblockquote%3EOkay%2C%20it%E2%80%99s%20really%20not.%20Instead%2C%20it%20almost%20seems%20like%20what%20Wave%20%3Cem%3Eshould%20have%20been%3C%2Fem%3E%20when%20Google%20launched%20it%20as%20a%20consumer-facing%20product.%20Groups%20may%20lack%20some%20of%20the%20snazzy%20HTML5%20bells%20and%20whistles%20and%20realtime%20technology%20of%20Wave%2C%20but%20it%20more%20than%20makes%20up%20for%20those%20in%20user%20experience%20and%20user%20interface%20elements%20that%20make%20this%20thing%20downright%20usable%20by%20human%20standards%20%E2%80%94%20something%2C%20sadly%2C%20Wave%20never%20quite%A0achieved.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EIf%20Google%20Wave%20was%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F10%2Fgoogle-wave-death%2F%5C%22%3Eoverly-ambitious%2C%3C%2Fa%3E%20Facebook%20Groups%20may%20be%20overly-social.%20Today%2C%20everyone%20seems%20to%20be%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fcalacanis-facebook%2F%5C%22%3Ecomplaining%3C%2Fa%3E%20about%20the%20fact%20that%20any%20friend%20can%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fconspiracies-privacy-spam-and-nambla-facebook-groups-are-fun%2F%5C%22%3Eadd%20you%20to%20a%20group%3C%2Fa%3E%20without%20your%20permission.%20But%20few%20people%20seem%20to%20recognize%20that%20this%20is%20%3Cem%3Eexactly%3C%2Fem%3E%20what%20Facebook%20is%20going%20for%20with%20Groups.%20Over%20the%20past%20few%20months%2C%20CEO%20%3Ca%20href%3D%5C%22http%3A%2F%2Fwww.crunchbase.com%2Fperson%2Fmark-zuckerberg%5C%22%3EMark%20Zuckerberg%3Cimg%20id%3D%5C%22snap_com_shot_link_icon%5C%22%20class%3D%5C%22snap_preview_icon%5C%22%20style%3D%5C%22margin-top%3A%200px%20%21important%3B%20margin-right%3A%200px%20%21important%3B%20margin-bottom%3A%200px%20%21important%3B%20margin-left%3A%200px%20%21important%3B%20max-height%3A%202000px%3B%20max-width%3A%202000px%3B%20min-width%3A%200px%3B%20min-height%3A%200px%3B%20border-top-width%3A%200px%3B%20border-right-width%3A%200px%3B%20border-bottom-width%3A%200px%3B%20border-left-width%3A%200px%3B%20border-style%3A%20initial%3B%20border-color%3A%20initial%3B%20font-style%3A%20normal%3B%20font-weight%3A%20normal%3B%20font-family%3A%20%5C%5C%5C%27trebuchet%20ms%5C%5C%5C%27%2C%20arial%2C%20helvetica%2C%20sans-serif%3B%20float%3A%20none%3B%20left%3A%20auto%3B%20top%3A%20auto%3B%20line-height%3A%20normal%3B%20background-color%3A%20transparent%3B%20background-image%3A%20url%28http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ftheme%2Fsilver%2Fpalette.gif%29%3B%20width%3A%2014px%3B%20height%3A%2012px%3B%20padding-top%3A%201px%3B%20padding-right%3A%200px%3B%20padding-bottom%3A%200px%3B%20padding-left%3A%200px%3B%20text-decoration%3A%20none%3B%20position%3A%20static%3B%20vertical-align%3A%20top%3B%20display%3A%20inline%3B%20visibility%3A%20visible%3B%20background-position%3A%20-1128px%200px%3B%20background-repeat%3A%20no-repeat%20no-repeat%3B%20%5C%22%20src%3D%5C%22http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%5C%22%3E%3C%2Fa%3E%20and%20others%20have%20been%20playing%20up%20the%20fact%20that%20Facebook%20Photos%20is%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F27%2Ffacebook-photos-usage%2F%5C%22%3Edestroying%20its%20competition%3C%2Fa%3E%20%E2%80%94%20and%20that%E2%80%99s%20entirely%20because%20of%20the%20social%20tagging%20feature.%3C%2Fblockquote%3E%0D%0A%27%29, method=GET, headers=array (
+), response=array (
+  'url' => 'http://query.yahooapis.com/v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=85d6ebc1aaaca4788304bfff09039f14&oauth_signature=3BRIAqkwAA%2BT8nAek6k6%2BifViP8%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=A%3D7vPR1P7Oj13wiSmZH1P.gMsWtwZ6bDDphSBd6XnjvQHziai.yovUPPRFTaqAdg1lAUO5Vi7ry3S.wEO_9cuqczeabVtMWM0T5hP9KBL8WcUZthilRXjqIx_caIXYiPnkTC_7G2i17XazZi2mVn6RLbCyd90EhRaGfYv9Q3AnDwGOKjm3RLtNEPQcNJbDeu993RvQOJQZrtzMvNyaXNMBxrViTo6kV3poh78aSD49M2CZsql3gxjEcrTLAU4jdylyrAlHS1s_Bmvi9Pc93E6sY9_gGxjbsGPH2v2piaVeEDYhC0afmbuGYjSulumadODvaTvx8_O3wwZ1CUsPYyGPT71R4KPL7Tvxi2Mmk2VznzmvokMaC0.amKw2ofLzUS_eFCCQSv7kuswGkHZm9HGd9b64ezeoTXn92598QF.x5RWgsZwPmrkKX1z5aqNJHfAdXuQslwa3Ykn8v5el_VF_zShMx4cERZA.0Qn.i8PBNtYxcYKHP8i6A6cea3lJ5MHdw8qGvy3E2q0Nc6C_34E.Ph0RjqbWh6LtKVBsB2pqXiY1wemHUZYGQ6YnAZv2uTWyzQWjrMdBCWQ10Nb.uT6GR1y3QommUXICAUN.Dy7HZRicoxG7HogAXyxAkSYrDxrm0_Orfdlebsx.UCt.STmadE1VKjkue5IRjUwFhkE_jY85hoot8Xg9P0Z311Tw4uDE1GXm243mzR0Q5GoRvutnymTz51sGDH4LaAUm2VEEdQ--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28type%2C%20content%2C%20caption%29%20VALUES%20%28%27photo%27%2C%20%27http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%27%2C%20%27%3Cblockquote%3EOkay%2C%20it%E2%80%99s%20really%20not.%20Instead%2C%20it%20almost%20seems%20like%20what%20Wave%20%3Cem%3Eshould%20have%20been%3C%2Fem%3E%20when%20Google%20launched%20it%20as%20a%20consumer-facing%20product.%20Groups%20may%20lack%20some%20of%20the%20snazzy%20HTML5%20bells%20and%20whistles%20and%20realtime%20technology%20of%20Wave%2C%20but%20it%20more%20than%20makes%20up%20for%20those%20in%20user%20experience%20and%20user%20interface%20elements%20that%20make%20this%20thing%20downright%20usable%20by%20human%20standards%20%E2%80%94%20something%2C%20sadly%2C%20Wave%20never%20quite%A0achieved.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EIf%20Google%20Wave%20was%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F10%2Fgoogle-wave-death%2F%5C%22%3Eoverly-ambitious%2C%3C%2Fa%3E%20Facebook%20Groups%20may%20be%20overly-social.%20Today%2C%20everyone%20seems%20to%20be%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fcalacanis-facebook%2F%5C%22%3Ecomplaining%3C%2Fa%3E%20about%20the%20fact%20that%20any%20friend%20can%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fconspiracies-privacy-spam-and-nambla-facebook-groups-are-fun%2F%5C%22%3Eadd%20you%20to%20a%20group%3C%2Fa%3E%20without%20your%20permission.%20But%20few%20people%20seem%20to%20recognize%20that%20this%20is%20%3Cem%3Eexactly%3C%2Fem%3E%20what%20Facebook%20is%20going%20for%20with%20Groups.%20Over%20the%20past%20few%20months%2C%20CEO%20%3Ca%20href%3D%5C%22http%3A%2F%2Fwww.crunchbase.com%2Fperson%2Fmark-zuckerberg%5C%22%3EMark%20Zuckerberg%3Cimg%20id%3D%5C%22snap_com_shot_link_icon%5C%22%20class%3D%5C%22snap_preview_icon%5C%22%20style%3D%5C%22margin-top%3A%200px%20%21important%3B%20margin-right%3A%200px%20%21important%3B%20margin-bottom%3A%200px%20%21important%3B%20margin-left%3A%200px%20%21important%3B%20max-height%3A%202000px%3B%20max-width%3A%202000px%3B%20min-width%3A%200px%3B%20min-height%3A%200px%3B%20border-top-width%3A%200px%3B%20border-right-width%3A%200px%3B%20border-bottom-width%3A%200px%3B%20border-left-width%3A%200px%3B%20border-style%3A%20initial%3B%20border-color%3A%20initial%3B%20font-style%3A%20normal%3B%20font-weight%3A%20normal%3B%20font-family%3A%20%5C%5C%5C%27trebuchet%20ms%5C%5C%5C%27%2C%20arial%2C%20helvetica%2C%20sans-serif%3B%20float%3A%20none%3B%20left%3A%20auto%3B%20top%3A%20auto%3B%20line-height%3A%20normal%3B%20background-color%3A%20transparent%3B%20background-image%3A%20url%28http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ftheme%2Fsilver%2Fpalette.gif%29%3B%20width%3A%2014px%3B%20height%3A%2012px%3B%20padding-top%3A%201px%3B%20padding-right%3A%200px%3B%20padding-bottom%3A%200px%3B%20padding-left%3A%200px%3B%20text-decoration%3A%20none%3B%20position%3A%20static%3B%20vertical-align%3A%20top%3B%20display%3A%20inline%3B%20visibility%3A%20visible%3B%20background-position%3A%20-1128px%200px%3B%20background-repeat%3A%20no-repeat%20no-repeat%3B%20%5C%22%20src%3D%5C%22http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%5C%22%3E%3C%2Fa%3E%20and%20others%20have%20been%20playing%20up%20the%20fact%20that%20Facebook%20Photos%20is%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F27%2Ffacebook-photos-usage%2F%5C%22%3Edestroying%20its%20competition%3C%2Fa%3E%20%E2%80%94%20and%20that%E2%80%99s%20entirely%20because%20of%20the%20social%20tagging%20feature.%3C%2Fblockquote%3E%0D%0A%27%29',
+  'content_type' => 'text/javascript;charset=utf-8',
+  'http_code' => 200,
+  'header_size' => 513,
+  'request_size' => 4815,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.763033,
+  'namelookup_time' => 0.003277,
+  'connect_time' => 0.005123,
+  'pretransfer_time' => 0.005132,
+  'size_upload' => 0,
+  'size_download' => 1047,
+  'speed_download' => 1372,
+  'speed_upload' => 0,
+  'download_content_length' => -1,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.761237,
+  'redirect_time' => 0,
+  'request_header' => 'GET /v1/yql?callback=void&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json&oauth_consumer_key=dj0yJmk9ZjFhTVJFb2JOUTJNJmQ9WVdrOWJGRm9ZbXByTlRnbWNHbzlNakV3T1RZMk5EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTM0&oauth_nonce=85d6ebc1aaaca4788304bfff09039f14&oauth_signature=3BRIAqkwAA%2BT8nAek6k6%2BifViP8%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1286562948&oauth_token=A%3D7vPR1P7Oj13wiSmZH1P.gMsWtwZ6bDDphSBd6XnjvQHziai.yovUPPRFTaqAdg1lAUO5Vi7ry3S.wEO_9cuqczeabVtMWM0T5hP9KBL8WcUZthilRXjqIx_caIXYiPnkTC_7G2i17XazZi2mVn6RLbCyd90EhRaGfYv9Q3AnDwGOKjm3RLtNEPQcNJbDeu993RvQOJQZrtzMvNyaXNMBxrViTo6kV3poh78aSD49M2CZsql3gxjEcrTLAU4jdylyrAlHS1s_Bmvi9Pc93E6sY9_gGxjbsGPH2v2piaVeEDYhC0afmbuGYjSulumadODvaTvx8_O3wwZ1CUsPYyGPT71R4KPL7Tvxi2Mmk2VznzmvokMaC0.amKw2ofLzUS_eFCCQSv7kuswGkHZm9HGd9b64ezeoTXn92598QF.x5RWgsZwPmrkKX1z5aqNJHfAdXuQslwa3Ykn8v5el_VF_zShMx4cERZA.0Qn.i8PBNtYxcYKHP8i6A6cea3lJ5MHdw8qGvy3E2q0Nc6C_34E.Ph0RjqbWh6LtKVBsB2pqXiY1wemHUZYGQ6YnAZv2uTWyzQWjrMdBCWQ10Nb.uT6GR1y3QommUXICAUN.Dy7HZRicoxG7HogAXyxAkSYrDxrm0_Orfdlebsx.UCt.STmadE1VKjkue5IRjUwFhkE_jY85hoot8Xg9P0Z311Tw4uDE1GXm243mzR0Q5GoRvutnymTz51sGDH4LaAUm2VEEdQ--&oauth_version=1.0&q=INSERT%20INTO%20meme.user.posts%20%28type%2C%20content%2C%20caption%29%20VALUES%20%28%27photo%27%2C%20%27http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%27%2C%20%27%3Cblockquote%3EOkay%2C%20it%E2%80%99s%20really%20not.%20Instead%2C%20it%20almost%20seems%20like%20what%20Wave%20%3Cem%3Eshould%20have%20been%3C%2Fem%3E%20when%20Google%20launched%20it%20as%20a%20consumer-facing%20product.%20Groups%20may%20lack%20some%20of%20the%20snazzy%20HTML5%20bells%20and%20whistles%20and%20realtime%20technology%20of%20Wave%2C%20but%20it%20more%20than%20makes%20up%20for%20those%20in%20user%20experience%20and%20user%20interface%20elements%20that%20make%20this%20thing%20downright%20usable%20by%20human%20standards%20%E2%80%94%20something%2C%20sadly%2C%20Wave%20never%20quite%A0achieved.%3C%2Fblockquote%3E%0D%0A%3Cblockquote%3EIf%20Google%20Wave%20was%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F10%2Fgoogle-wave-death%2F%5C%22%3Eoverly-ambitious%2C%3C%2Fa%3E%20Facebook%20Groups%20may%20be%20overly-social.%20Today%2C%20everyone%20seems%20to%20be%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fcalacanis-facebook%2F%5C%22%3Ecomplaining%3C%2Fa%3E%20about%20the%20fact%20that%20any%20friend%20can%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F10%2F07%2Fconspiracies-privacy-spam-and-nambla-facebook-groups-are-fun%2F%5C%22%3Eadd%20you%20to%20a%20group%3C%2Fa%3E%20without%20your%20permission.%20But%20few%20people%20seem%20to%20recognize%20that%20this%20is%20%3Cem%3Eexactly%3C%2Fem%3E%20what%20Facebook%20is%20going%20for%20with%20Groups.%20Over%20the%20past%20few%20months%2C%20CEO%20%3Ca%20href%3D%5C%22http%3A%2F%2Fwww.crunchbase.com%2Fperson%2Fmark-zuckerberg%5C%22%3EMark%20Zuckerberg%3Cimg%20id%3D%5C%22snap_com_shot_link_icon%5C%22%20class%3D%5C%22snap_preview_icon%5C%22%20style%3D%5C%22margin-top%3A%200px%20%21important%3B%20margin-right%3A%200px%20%21important%3B%20margin-bottom%3A%200px%20%21important%3B%20margin-left%3A%200px%20%21important%3B%20max-height%3A%202000px%3B%20max-width%3A%202000px%3B%20min-width%3A%200px%3B%20min-height%3A%200px%3B%20border-top-width%3A%200px%3B%20border-right-width%3A%200px%3B%20border-bottom-width%3A%200px%3B%20border-left-width%3A%200px%3B%20border-style%3A%20initial%3B%20border-color%3A%20initial%3B%20font-style%3A%20normal%3B%20font-weight%3A%20normal%3B%20font-family%3A%20%5C%5C%5C%27trebuchet%20ms%5C%5C%5C%27%2C%20arial%2C%20helvetica%2C%20sans-serif%3B%20float%3A%20none%3B%20left%3A%20auto%3B%20top%3A%20auto%3B%20line-height%3A%20normal%3B%20background-color%3A%20transparent%3B%20background-image%3A%20url%28http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ftheme%2Fsilver%2Fpalette.gif%29%3B%20width%3A%2014px%3B%20height%3A%2012px%3B%20padding-top%3A%201px%3B%20padding-right%3A%200px%3B%20padding-bottom%3A%200px%3B%20padding-left%3A%200px%3B%20text-decoration%3A%20none%3B%20position%3A%20static%3B%20vertical-align%3A%20top%3B%20display%3A%20inline%3B%20visibility%3A%20visible%3B%20background-position%3A%20-1128px%200px%3B%20background-repeat%3A%20no-repeat%20no-repeat%3B%20%5C%22%20src%3D%5C%22http%3A%2F%2Fi.ixnp.com%2Fimages%2Fv6.48%2Ft.gif%5C%22%3E%3C%2Fa%3E%20and%20others%20have%20been%20playing%20up%20the%20fact%20that%20Facebook%20Photos%20is%20%3Ca%20href%3D%5C%22http%3A%2F%2Ftechcrunch.com%2F2010%2F08%2F27%2Ffacebook-photos-usage%2F%5C%22%3Edestroying%20its%20competition%3C%2Fa%3E%20%E2%80%94%20and%20that%E2%80%99s%20entirely%20because%20of%20the%20social%20tagging%20feature.%3C%2Fblockquote%3E%0D%0A%27%29 HTTP/1.1
+User-Agent: yos-social-php (1.0.0) / PHP (5.2.14)
+Host: query.yahooapis.com
+Accept: */*
+Accept-Encoding: deflate, gzip
+
+',
+  'response_body' => 'void({"query":{"count":"1","created":"2010-10-08T18:35:49Z","lang":"en-US","results":{"status":{"code":"200","message":"ok","post":{"pubid":"LcpGB1d","guid":"OFQMEF5DOCIUWA6TVTUZUF35VI","url":"http://meme.yahoo.com/daime/p/LcpGB1d/","timestamp":"1286562949398","category":"photo","type":"photo","content":{"thumb":"http://d.yimg.com/cc/img/resize/*/200x200/true/http%3A%2F%2Fd.yimg.com%2Fgg%2Fu%2F28de6d8fa34c44b463170bfd810749634c6de8b6.png","content":"http://d.yimg.com/gg/u/28de6d8fa34c44b463170bfd810749634c6de8b6.png"},"repost_count":"0","appid":"lQhbjk58","comment":"","caption":"<blockquote>Okay, it’s really not. Instead, it almost seems like what Wave <em>should have been</em> when Google launched it as a consumer-facing product. Groups may lack some of the snazzy HTML5 bells and whistles and realtime technology of Wave, but it more than makes up for those in user experience and user interface elements that make this thing downright usable by human standards — something, sadly, Wave never quite�achieved.</blockquote>\\n<blockquote>If Google Wave was <a rel=\\"nofollow\\">overly-ambitious,</a> Facebook Groups may be overly-social. Today, everyone seems to be <a rel=\\"nofollow\\">complaining</a> about the fact that any friend can <a rel=\\"nofollow\\">add you to a group</a> without your permission. But few people seem to recognize that this is <em>exactly</em> what Facebook is going for with Groups. Over the past few months, CEO <a rel=\\"nofollow\\">Mark Zuckerberg</a> and others have been playing up the fact that Facebook Photos is <a rel=\\"nofollow\\">destroying its competition</a> — and that’s entirely because of the social tagging feature.</blockquote>","via_guid":null,"origin_guid":null,"origin_pubid":null,"latitude":null,"longitude":null,"img_original_url":"http://i.ixnp.com/images/v6.48/t.gif"}}}}});',
+  'response_header' => 'HTTP/1.1 200 OK
+Date: Fri, 08 Oct 2010 18:35:48 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=299
+Vary: Accept-Encoding
+Content-Type: text/javascript;charset=utf-8
+Content-Encoding: gzip
+Age: 2
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: YTS/1.17.21',
+  'response_code' => '200',
+  'response_headers' => 
+  array (
+    'Date' => 'Fri, 08 Oct 2010 18:35:48 GMT',
+    'P3P' => 'policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"',
+    'Access-Control-Allow-Origin' => '*',
+    'Cache-Control' => 'public, max-age=299',
+    'Vary' => 'Accept-Encoding',
+    'Content-Type' => 'text/javascript;charset=utf-8',
+    'Content-Encoding' => 'gzip',
+    'Age' => '2',
+    'Transfer-Encoding' => 'chunked',
+    'Connection' => 'keep-alive',
+    'Server' => 'YTS/1.17.21',
+  ),
+)
