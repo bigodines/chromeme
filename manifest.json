@@ -1,10 +1,10 @@
 {
   "name": "ChroMeme",
-  "version": "1.0",
+  "version": "0.9",
   "description": "ChroMeme - using Chrome to add awesome content into meme",
   "background_page" : "background_page.html",
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "repost_19x19.png"
     },	
   "content_scripts": [
     { "matches": ["http://*/*"], 

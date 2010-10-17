@@ -1,7 +1,72 @@
-<input type="button" name="startSelection" onclick="(new chrome.extension.getBackgroundPage()).simple_command('bind');"  value="Enable Highlight" />
-<br />
-<input type="button" name="postOnMeme" onclick="(new chrome.extension.getBackgroundPage()).post();"  value="Edit & Post on Meme" />
-<br />
-<input type="button" name="clearSelection" onclick="(new chrome.extension.getBackgroundPage()).simple_command('clear');" value="Clear Selection" />
-<br />
-<input type="button" name="disableExtension" onclick="(new chrome.extension.getBackgroundPage()).simple_command('unbind');" value="Disable Highlight" />
+<!-- ======== CSS ======== -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+<!-- ======== HTML ======== -->
+<div class="selection_area">
+    <input type="button" name="startSelection" onclick="(new chrome.extension.getBackgroundPage()).simple_command('bind');"  value="Start Selection" />
+    <input type="button" name="postOnMeme" onclick="(new chrome.extension.getBackgroundPage()).post();" value="Edit & Post" />
+    <input type="button" name="clearSelection" onclick="(new chrome.extension.getBackgroundPage()).simple_command('clear');" value="Clear Selection" />
+    <input type="button" name="disableExtension" onclick="(new chrome.extension.getBackgroundPage()).simple_command('unbind');" value="Stop Selection" />
+</div>
+
+<div class="search_form">
+    <input class="input_query" type="text" size="50" id="i_query" value="art"/>
+    <input class="search_button" type="button" id="search_button" value="Search" />
+</div>
+
+<div width="100%" style="margin: 10px 0px 0px 0px; text-align:center; display:none" id="img_loader">
+    <img src="http://farm5.static.flickr.com/4024/4449272071_077afe26d0_o.gif" />
+</div>
+
+<div id="results" class="results">
+    
+    <!-- == TEMPLATE SAMPLE == -->
+    <div class="post" id="template_post" style="display:none;">
+        <a class="user_link" href="">
+            <img class="user_thumb"
+                 title=""
+                 src="">
+        </a>
+        <div class="content_container">
+            <a class="post_content"></a>
+            <a class="post_caption"></a>
+        </div>
+    </div>
+    <!-- == END TEMPLATE SAMPLE == -->
+
+</div>
+
+
+
+
+<!-- ======== JAVASCRIPT ======== -->
+<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="js/memechrome.js"></script>
+<script src="js/yql.js"></script>
+<script src="js/post.js"></script>
+<script src="js/searcher.js"></script>
+
+
+<script>
+
+    if (!localStorage.oauth) {
+        localStorage.oauth = "123";
+    }
+
+    var elements = {
+        template_post: $('#template_post')
+    }
+    
+    var searcher = mc.searcher({
+        img_loader: $("#img_loader"),
+        i_query: $("#i_query"),
+        div_content: $("#results")
+    });
+    
+    $('#search_button').click(function () {
+        searcher.search();
+    })
+
+</script>
+<!--script src="http://query.yahooapis.com/v1/public/yql?q=SELECT * FROM meme.posts WHERE owner_guid='AV4WCKTSTM7IVGSRQOCRS2Q63M';&format=json&callback=loader"></script-->
+<!-- vim: set sts=4 sw=4 ts=4 et: -->

@@ -1,0 +1,92 @@
+* {
+    font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,arial,sans-serif;
+    font-weight:300;
+}
+
+body {
+  width:420px;
+  overflow-x:hidden;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10px 20px 10px 5px;
+}
+
+img .thumb {
+  margin:5px;
+  border:2px solid black;
+  vertical-align:middle;
+  /*width:30%;
+  height:30%;*/
+}
+
+a {
+  text-decoration: none;
+  color: #262A48;
+}
+
+
+.search_form {
+    _background:transparent url(http://dev.mm.yimg.com/img/global/1234567890/header_icons.png) no-repeat scroll 124px -52px;
+    border:1px solid #CCCCCC;
+    color:#999999;
+    height:25px;
+    width:400px;
+    padding: 1px 1px 0px 0px;
+    margin: 10px 0px 0px 5px;
+}
+
+.search_form input {
+    background-color:transparent;
+    border:0 none;
+    color:#999999;
+    __float:left;
+    font-size:17px;
+    outline-style:none;
+    outline-width:0;
+    __padding:3px;
+}
+
+.search_form .input_query {
+    width:330px;
+    padding:0 0 0 5px;
+    _border: 1px solid red;
+}
+
+.search_form .search_button {
+    color: white;
+    background-color: #D7D7D7;
+    height: 22px;
+    margin: 0;
+}
+
+.results {
+    padding: 20px 0 10px 5px;
+    margin: 0 15px 0 5px;
+    /*background-color: #D7D7D7;*/
+}
+
+.post {
+    border: 1px outset #D7D7D7;
+    background-color: #F0EFEF;
+    padding: 3px 3px 3px 3px;
+    margin: 0px 0px 5px 0px;
+    font-size: 14px;
+    display: block;
+    clear: both;
+    min-height: 50px;
+}
+
+.post .user_link {
+    float: left;
+    margin-right: 10px;
+}
+
+.post .content_container {
+    display: block;
+}
+
+.post .post_caption {
+    display: block;
+    margin: 8px 0 0 57px;
+}
+
+/* vim: set sts=4 sw=4 ts=4 et: */
