@@ -78,9 +78,9 @@ switch($action) {
         <form name="post_text" method="GET">
             <input type="hidden" name="action" value="request_token" />
             <select name="post_type">
-		<option value="text" <?php echo (!isset($_SESSION['post_type']) || $_SESSION['post_type'] == 'text') ? "selected" : ""; ?>>Text</option>
-		<option value="photo" <?php echo ($_SESSION['post_type'] == 'photo') ? "selected" : "" ?>>Photo</option>
-                <option value="video"  <?php echo ($_SESSION['post_type'] == 'video') ? "selected" : "" ?>>Video</option>
+			<option value="text" <?php echo (!isset($_SESSION['post_type']) || $_SESSION['post_type'] == 'text') ? "selected" : ""; ?>>Text</option>
+		    <option value="photo" <?php echo ($_SESSION['post_type'] == 'photo') ? "selected" : "" ?>>Photo</option>
+            <option value="video"  <?php echo ($_SESSION['post_type'] == 'video') ? "selected" : "" ?>>Video</option>
 
             </select>
 	    <br />content:

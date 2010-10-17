@@ -1,10 +1,7 @@
 <?php
 /**
 Welcome to the ugliest piece of code ever
-
 */
-
-
 
 session_start();
 // change config.php to reflect your app credentials
@@ -27,7 +24,7 @@ $app = new YahooOAuthApplication( OAUTH_CONSUMER_KEY, OAUTH_CONSUMER_SECRET, OAU
 
 switch($action) {
  case 'request_token':
-  // this URL will be called after user login. Don't forget to exchange the token!!!
+  // this URL will be called after user login. If you are modifying this code, don't forget to exchange the token!!!
   $post_type = urlencode($_REQUEST['post_type']);
   $callback = APP_URL . '/oAuthExample.php?action=authorized&post_type='.$post_type;
   $request_token = $app->getRequestToken( $callback );
@@ -61,7 +58,6 @@ switch($action) {
     
   print "<h1>CONGRATS! YOU DID IT (or not.. You'd better double check :P)</h1>";
   break;
-
  
  default:
    if ($_REQUEST['content']) {
@@ -70,7 +66,6 @@ switch($action) {
      $_SESSION['post_type'] = $_REQUEST['post_type'];
    }
 }
-
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">

@@ -120,4 +120,4 @@ notifications().set_item(0, new Date().getTime());
 console.log(notifications().get_item(0));
 
 // check for updates!!
-setInterval("notifications().check()", 1000*60*3); // every 3 minutes 
+//setInterval("notifications().check()", 1000*60*3); // every 3 minutes 
