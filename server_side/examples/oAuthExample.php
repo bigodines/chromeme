@@ -71,22 +71,39 @@ switch($action) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
-        <title>Yahoo! Meme posting example!</title>
+        <title>ChroMeme!</title>
     </head>
     <body>
         <p>The goal of this example is to show you how to add content to Meme using your own app ;P</p>
         <form name="post_text" method="GET">
             <input type="hidden" name="action" value="request_token" />
-            <select name="post_type">
-			<option value="text" <?php echo (!isset($_SESSION['post_type']) || $_SESSION['post_type'] == 'text') ? "selected" : ""; ?>>Text</option>
-		    <option value="photo" <?php echo ($_SESSION['post_type'] == 'photo') ? "selected" : "" ?>>Photo</option>
-            <option value="video"  <?php echo ($_SESSION['post_type'] == 'video') ? "selected" : "" ?>>Video</option>
+            <input type="hidden" name="post_type" value="<?php echo $_SESSION['post_type']; ?>" /> 
+<?php
+    if ($_SESSION['post_type'] == "photo") {
+	    echo "<img src='".$_SESSION['full_content']."'/><br />";
+    }
+    else if ($_SESSION['post_type'] == "video") {
+        echo '<object width="425" height="344">'.
+		  '<param name="movie" value="'.$_SESSION['full_content'].'">'.
+		  '.</param><param name="allowFullScreen" value="true">'.
+		  '</param><param name="allowscriptaccess" value="always">'.
+		  '</param><embed src="'.$_SESSION['full_content'].'" '.
+		  'type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344">'.
+		  '</embed></object> ';
 
-            </select>
+	}
+?>
+			
+<?php
+    if ($_SESSION['post_type'] == "text") {
+?>
 	    <br />content:
-	    <textarea name="content" cols="60" rows="6"><?php echo @$_SESSION['full_content']; ?></textarea>
-	    <br />caption (for photos and videos)
-	    <textarea name="caption" cols="60" rows="3"><?php echo $_SESSION['full_caption']; ?></textarea>
+	    <textarea name="content" cols="80" rows="10"><?php echo $_SESSION['full_content']; ?></textarea>
+
+<?php
+    }
+?>	    <br />caption (for photos and videos)
+	    <textarea name="caption" cols="80" rows="10"><?php echo $_SESSION['full_caption']; ?></textarea>
             <input type="submit" value="post this on meme!" />
         </form>
     </body>
