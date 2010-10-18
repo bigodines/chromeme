@@ -44,7 +44,7 @@ function post() {
 
 var makeRequest = function(args) { 
     var url, data, method, callback;
-
+	//console.log(args);
     url = args.url;
     data = args.data;
     method = args.method || "POST";

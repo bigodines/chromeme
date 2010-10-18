@@ -32,6 +32,7 @@ switch($action) {
   $_SESSION['request_token_secret'] = $request_token->secret;
   $_SESSION['full_content'] = @$_REQUEST['content'];
   $_SESSION['full_caption'] = @$_REQUEST['caption'];
+  $_SESSION['post_type'] = $_REQUEST['post_type'];
   $redirect_url = $app->getAuthorizationUrl( $request_token );
   // send user to Yahoo! so he can authorize our example to post on his Meme
   Header( "Location: $redirect_url");
@@ -49,12 +50,12 @@ switch($action) {
   $content = $_SESSION['full_content'];
   $caption = $_SESSION['full_caption'];
   
-  $token = new OAuthToken(  $_SESSION['ACCESS_TOKEN'], $_SESSION['ACCESS_TOKEN_SECRET']);
+  $token = new OAuthToken($_SESSION['ACCESS_TOKEN'], $_SESSION['ACCESS_TOKEN_SECRET']);
   $app->token = $token;
   /* Congratulations! You've just logged in into Yahoo! and now are able to 
    * post on meme :P' */
-  $meme = new MemeRepository(  );
-  $meme->insert($app, $_REQUEST['post_type'], $content, (isset($caption) && !empty($caption)) ? $caption : null);
+  $meme = new MemeRepository();
+  $meme->insert($app, $_SESSION['post_type'], $content, (isset($caption) && !empty($caption)) ? $caption : null);
     
   print "<h1>CONGRATS! YOU DID IT (or not.. You'd better double check :P)</h1>";
   break;
@@ -64,7 +65,7 @@ switch($action) {
      $_SESSION['full_content'] = urldecode(@$_REQUEST['content']);
      $_SESSION['full_caption'] = urldecode(@$_REQUEST['caption']);
      $_SESSION['post_type'] = $_REQUEST['post_type'];
-   }
+   } 
 }
 
 ?>
@@ -80,10 +81,11 @@ switch($action) {
             <input type="hidden" name="post_type" value="<?php echo $_SESSION['post_type']; ?>" /> 
 <?php
     if ($_SESSION['post_type'] == "photo") {
-	    echo "<img src='".$_SESSION['full_content']."'/><br />";
+	    echo "<input type='hidden' name='content' value='".$_SESSION['full_content']."' /><img src='".$_SESSION['full_content']."'/><br />";
     }
     else if ($_SESSION['post_type'] == "video") {
-        echo '<object width="425" height="344">'.
+      echo "<input type='hidden' name='content' value='".$_SESSION['full_content']."' />";  
+	  echo '<object width="425" height="344">'.
 		  '<param name="movie" value="'.$_SESSION['full_content'].'">'.
 		  '.</param><param name="allowFullScreen" value="true">'.
 		  '</param><param name="allowscriptaccess" value="always">'.
@@ -101,6 +103,8 @@ switch($action) {
 	    <textarea name="content" cols="80" rows="10"><?php echo $_SESSION['full_content']; ?></textarea>
 
 <?php
+	} else {
+	
     }
 ?>	    <br />caption (for photos and videos)
 	    <textarea name="caption" cols="80" rows="10"><?php echo $_SESSION['full_caption']; ?></textarea>
