@@ -1,16 +1,3 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(null,
-                           {file:"content_script.js",
-                            allFrames: true}
-                           );
-   // attempt to fix 'smart_meme is not defined bug.'
-   chrome.tabs.executeScript(null,
-                           {file:"smart_meme.js",
-                            allFrames: true}
-                           );
-    chrome.browserAction.setPopup({popup:"popup.html"});
-});
-
 // bind, unbind and clear are simple commands
 function simple_command(command) {
     chrome.tabs.getSelected(null, function(tab) {
@@ -36,7 +23,6 @@ function post() {
     });
     notifications().set_item(0, new Date().getTime());
 }
-
 
 /**
     ajax galponero

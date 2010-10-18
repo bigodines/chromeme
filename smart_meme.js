@@ -35,7 +35,6 @@ smart_meme = function() {
         _toggle(e);
     };
 
-
     eventHandler = function(evt) {
         var elem,old_border, bindable_elements;
 
@@ -54,7 +53,7 @@ smart_meme = function() {
     };
 
     _mouseout = function(elem) {
-        //        var e = elem.srcElement || elem.target;
+        // var e = elem.srcElement || elem.target;
         // e.style.border = 0px;
     };
 
@@ -66,7 +65,6 @@ smart_meme = function() {
         } else {
             clazz = clazz + " smart_meme";
         }
-	    console.log(elem.className);
 
         elem.className = clazz.trim();
     };
